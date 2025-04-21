@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portifolio</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById("navLinks");
+        nav.classList.toggle("active");
+    }
+</script>
+<body>
+    <div id="navbar"></div>
+    
+    <main>
+        <div class="container-home">
+            <div class="home-content poppins">
+              <p class="size no-margin">Hello, I am</p>
+              <h1 id="name" class="text">Mariana Vilarim</h1>
+              <p class="underName gradient no-margin">UX/UI Design<span class="typed"></span></p>
+            </div>
+            <div class="image-container">
+              <img class="image" src="/assets/me-removebg-preview 1.png" alt="Image">
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+	<script type="module" src="navLogic.js"></script>
+</body>
+</html>
+  
+<style>
+.size {
+    font-size: 26px;
+}
+.no-margin{
+    margin: 0;
+}
+.text{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.container-home {
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14%;
+    padding-bottom: 3%;
+    gap: 230px;
+}
+#name {
+    color: #bb6bd9;
+    font-weight: bold;
+    font-size: 85px;
+}
+
+.underName {
+    color: #bb6bd9;
+    font-weight: bold;
+    font-size: 50px;
+}
+.image-container {
+    position: relative;
+}
+.gradient {
+    font-size: 36px;
+    background: linear-gradient(to right, #b96cd8 0%, #9d989f 30%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+}
+.image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .container-home {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  .image-container {
+    margin-top: 30px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  nav a {
+    font-size: 16px;
+    margin-left: 15px;
+  }
+
+  #name {
+    font-size: 42px;
+  }
+
+  .underName {
+    font-size: 24px;
+  }
+
+  .size {
+    font-size: 16px;
+  }
+
+  .image-container img {
+    max-width: 250px;
+  }
+
+  .container-home {
+    gap: 30px;
+    padding: 100px 5% 30px;
+  }
+  .gradient {
+    font-size: 24px;
+  }
+}
+</style>

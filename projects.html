@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById("navLinks");
+        nav.classList.toggle("active");
+    }
+</script>
+<body>
+    <div id="navbar"></div>
+    <div class="gallery-section mt-4">
+        <div class="container-projects poppins">
+            <div class="top">
+                <h1 class="title">Projects</h1>   
+                <p>UX/UI DESIGN</p>
+            </div>
+    
+            <div class="image-row">
+                <div class="image-box">
+                    <img src="/assets/projects/Frame 1.png" alt="Image 1">
+                </div>
+                <div class="image-box">
+                    <img src="/assets/projects/Frame 2.png" alt="Image 2">
+                </div>
+            </div>
+    
+            <div class="image-row">
+                <div class="image-box">
+                    <img src="/assets/projects/Frame 3.png" alt="Image 3">
+                </div>
+                <div class="image-box">
+                    <img src="/assets/projects/Frame 4.png" alt="Image 4">
+                </div>
+            </div>
+    
+            <div class="image-row single mb-4">
+                <div class="image-box">
+                    <img src="/assets/projects/Frame 5.png" alt="Image 5">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+    display: block;
+}
+
+.title {
+    color: #bb6bd9;
+    font-weight: bold;
+    font-size: 60px;
+    padding-top: 35px;
+    padding-bottom: 2.5%;
+}
+
+.container-projects {
+    text-align: center;
+    padding: 0 0;
+}
+
+.top {
+    text-align: center;
+}
+
+.top p {
+    width: fit-content;
+    color: #ffffff;
+    font-size: 26px;
+    display: inline-block;
+    border-bottom: 4px solid #bb6bd9;
+    padding-bottom: 8px;
+    margin: 0 auto;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+.mb-4 {
+    margin-bottom: 5rem;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 70px;
+    flex-wrap: wrap;
+}
+
+.image-row.single {
+    justify-content: center;
+}
+
+.image-box {
+    flex: 1 1 45%;
+    max-width: 38rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.image-box:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .image-box {
+        width: 90%;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .top p {
+        font-size: 20px;
+    }
+    .image-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .image-box {
+        width: 100%;
+        max-width: 90%;
+    }
+}
+</style>
